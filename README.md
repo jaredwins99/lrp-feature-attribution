@@ -4,8 +4,7 @@
 *STATUS: Pre-LMM*
 
 **Note**: This is just an overview of the project. For detailed analysis, methodologies, and insights, refer to the
-main [report](https://github.com/jaredwins99/lrp-feature-attribution/blob/main/IML_Final_Paper__Attribution_for_Data_w
-ith_Graphical_Feature_Dependencies.pdf).
+main [report](https://github.com/jaredwins99/lrp-feature-attribution/blob/main/IML_Final_Paper__Attribution_for_Data_with_Graphical_Feature_Dependencies.pdf).
 
 ---
 
@@ -18,7 +17,7 @@ ith_Graphical_Feature_Dependencies.pdf).
 - [plotting_functions.py](https://github.com/jaredwins99/lrp-feature-attribution/blob/main/plotting_functions.py): heatmap and correlation-network visualization utilities
 
 <br>
-<img width="900" alt="Correlation matrices as a function of max eigenvector centrality and eigenvector centrality
+<img width="600" alt="Correlation matrices as a function of max eigenvector centrality and eigenvector centrality
 entropy" src="plots/all_correlations.png" />
 <br>
 
