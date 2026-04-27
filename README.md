@@ -34,8 +34,8 @@ Can LRP recover them, and what happens to attribution quality as correlation (me
 ---
 
 ## Graphical Dependencies
-Tabular data is often called "unstructured" because, unlike images or text, it has no spatial or sequential grid. 
-Even so, we can *impose* an arbitrary dependence structure and treat the correlation matrix as a weighted adjacency matrix on the feature graph.
+Tabular data is called "unstructured" because it has no spatial or sequential grid unlike images or text. 
+Even so, we can *impose* an arbitrary dependence structure and treat the correlation matrix as a weighted adjacency matrix on the feature graph (or network).
 
 That reframing lets graph-theoretic metrics describe the structure:
 - **Max eigenvector centrality** — how concentrated the influence is on a single feature
@@ -52,9 +52,9 @@ The graph above shows one such correlation structure as a network with edge colo
 ## Simulation Methodology
 The data generation is done in three progressively complex stages:
 1. **Uncorrelated linear** — 10 standard-normal features, with the first 5 contributing to `y` with various parameters plus 5 noise features
-2. **Split** — feature 8 only contributes to odd-indexed observations, while feature 0 only contributes to
+2. **Split domain** — feature 8 only contributes to odd-indexed observations, while feature 0 only contributes to
 even-indexed ones, with an indicator feature added to help the MLP learn the regime
-3. **Correlated** — features drawn from a multivariate normal whose covariance is built as `Σ = N(WWᵀ + D)N`,
+3. **Graphical Correlation** — features drawn from a multivariate normal whose covariance is built as `Σ = N(WWᵀ + D)N`,
 normalized to a correlation matrix
 
 `W` is taken as an increasing sequence raised to a power (controlling skewness, and thus eigenvector-centrality
@@ -109,7 +109,7 @@ The truly relevant features do light up. But the feature that should only matter
 
 ---
 
-### 3. Add correlation
+### 3. Graphical correlation
 
 Same split-domain target, now run across each of the 25 correlation structures from the top grid. 
 
